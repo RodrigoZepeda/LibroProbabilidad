@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Capítulo 5 Probabilidad condicional e independencia | Notas para un curso de probabilidad</title>
+  <meta name="description" content="Introducción a un curso de probabilidad para economía, finanzas e ingeniería" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Capítulo 5 Probabilidad condicional e independencia | Notas para un curso de probabilidad" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Introducción a un curso de probabilidad para economía, finanzas e ingeniería" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Capítulo 5 Probabilidad condicional e independencia | Notas para un curso de probabilidad" />
+  
+  <meta name="twitter:description" content="Introducción a un curso de probabilidad para economía, finanzas e ingeniería" />
+  
+
+<meta name="author" content="Rodrigo Zepeda-Tello / Luis Carlos Bernal" />
+
+
+<meta name="date" content="2020-12-18" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="conteo.html"/>
+<link rel="next" href="references.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Notas a un curso de probabilidad</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Algunos problemas probabilísticos</a></li>
+<li class="chapter" data-level="2" data-path="repaso-diferencial.html"><a href="repaso-diferencial.html"><i class="fa fa-check"></i><b>2</b> Repaso de Cálculo Diferencial</a><ul>
+<li class="chapter" data-level="2.1" data-path="repaso-diferencial.html"><a href="repaso-diferencial.html#ejercicios-que-se-espera-puedas-resolver"><i class="fa fa-check"></i><b>2.1</b> Ejercicios que se espera puedas resolver</a></li>
+<li class="chapter" data-level="2.2" data-path="repaso-diferencial.html"><a href="repaso-diferencial.html#errores-comunes-de-álgebra"><i class="fa fa-check"></i><b>2.2</b> Errores comunes de álgebra</a></li>
+<li class="chapter" data-level="2.3" data-path="repaso-diferencial.html"><a href="repaso-diferencial.html#propiedades-de-los-logaritmos-y-la-exponencial"><i class="fa fa-check"></i><b>2.3</b> Propiedades de los logaritmos y la exponencial</a></li>
+<li class="chapter" data-level="2.4" data-path="repaso-diferencial.html"><a href="repaso-diferencial.html#derivadas"><i class="fa fa-check"></i><b>2.4</b> Derivadas</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="repaso-diferencial.html"><a href="repaso-diferencial.html#definición-como-límite"><i class="fa fa-check"></i><b>2.4.1</b> Definición como límite</a></li>
+<li class="chapter" data-level="2.4.2" data-path="repaso-diferencial.html"><a href="repaso-diferencial.html#derivada-de-la-suma"><i class="fa fa-check"></i><b>2.4.2</b> Derivada de la suma</a></li>
+<li class="chapter" data-level="2.4.3" data-path="repaso-diferencial.html"><a href="repaso-diferencial.html#derivada-del-producto"><i class="fa fa-check"></i><b>2.4.3</b> Derivada del producto</a></li>
+<li class="chapter" data-level="2.4.4" data-path="repaso-diferencial.html"><a href="repaso-diferencial.html#derivada-de-una-división"><i class="fa fa-check"></i><b>2.4.4</b> Derivada de una división</a></li>
+<li class="chapter" data-level="2.4.5" data-path="repaso-diferencial.html"><a href="repaso-diferencial.html#regla-de-la-cadena"><i class="fa fa-check"></i><b>2.4.5</b> Regla de la cadena</a></li>
+<li class="chapter" data-level="2.4.6" data-path="repaso-diferencial.html"><a href="repaso-diferencial.html#derivación-logarítmica"><i class="fa fa-check"></i><b>2.4.6</b> Derivación logarítmica</a></li>
+<li class="chapter" data-level="2.4.7" data-path="repaso-diferencial.html"><a href="repaso-diferencial.html#derivadas-parciales"><i class="fa fa-check"></i><b>2.4.7</b> Derivadas parciales</a></li>
+<li class="chapter" data-level="2.4.8" data-path="repaso-diferencial.html"><a href="repaso-diferencial.html#gradiente"><i class="fa fa-check"></i><b>2.4.8</b> Gradiente</a></li>
+<li class="chapter" data-level="2.4.9" data-path="repaso-diferencial.html"><a href="repaso-diferencial.html#matriz-hessiana"><i class="fa fa-check"></i><b>2.4.9</b> Matriz hessiana</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>3</b> Introducción</a><ul>
+<li class="chapter" data-level="3.1" data-path="intro.html"><a href="intro.html#algunos-problemas-de-probabilidad"><i class="fa fa-check"></i><b>3.1</b> Algunos problemas de probabilidad</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="intro.html"><a href="intro.html#ejemplos-sencillos-de-casos-favorables-entre-totales"><i class="fa fa-check"></i><b>3.1.1</b> Ejemplos sencillos de casos favorables entre totales</a></li>
+<li class="chapter" data-level="3.1.2" data-path="intro.html"><a href="intro.html#teoría-básica-de-conjuntos"><i class="fa fa-check"></i><b>3.1.2</b> Teoría básica de conjuntos</a></li>
+<li class="chapter" data-level="3.1.3" data-path="intro.html"><a href="intro.html#axiomas-de-kolmogorov-versión-1"><i class="fa fa-check"></i><b>3.1.3</b> Axiomas de Kolmogorov (versión 1)</a></li>
+<li class="chapter" data-level="3.1.4" data-path="intro.html"><a href="intro.html#propiedades-de-la-probabilidad"><i class="fa fa-check"></i><b>3.1.4</b> Propiedades de la probabilidad</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="intro.html"><a href="intro.html#ejercicios-resueltos"><i class="fa fa-check"></i><b>3.2</b> Ejercicios resueltos</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="conteo.html"><a href="conteo.html"><i class="fa fa-check"></i><b>4</b> Conteo</a><ul>
+<li class="chapter" data-level="4.1" data-path="conteo.html"><a href="conteo.html#principios-de-conteo"><i class="fa fa-check"></i><b>4.1</b> Principios de conteo</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="conteo.html"><a href="conteo.html#permutaciones-muestras-ordenadas"><i class="fa fa-check"></i><b>4.1.1</b> Permutaciones (muestras ordenadas)</a></li>
+<li class="chapter" data-level="4.1.2" data-path="conteo.html"><a href="conteo.html#combinaciones-subpoblaciones"><i class="fa fa-check"></i><b>4.1.2</b> Combinaciones (subpoblaciones)</a></li>
+<li class="chapter" data-level="4.1.3" data-path="conteo.html"><a href="conteo.html#particiones-problemas-de-ocupación"><i class="fa fa-check"></i><b>4.1.3</b> Particiones (problemas de ocupación)</a></li>
+<li class="chapter" data-level="4.1.4" data-path="conteo.html"><a href="conteo.html#representación-mediante-árboles"><i class="fa fa-check"></i><b>4.1.4</b> Representación mediante árboles</a></li>
+<li class="chapter" data-level="4.1.5" data-path="conteo.html"><a href="conteo.html#representación-mediante-puntos-y-líneas"><i class="fa fa-check"></i><b>4.1.5</b> Representación mediante puntos y líneas</a></li>
+<li class="chapter" data-level="4.1.6" data-path="conteo.html"><a href="conteo.html#principio-de-inclusiónexclusión"><i class="fa fa-check"></i><b>4.1.6</b> Principio de inclusión/exclusión</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="conteo.html"><a href="conteo.html#conteo-con-proba"><i class="fa fa-check"></i><b>4.2</b> Conteo con proba</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="conteo.html"><a href="conteo.html#muestreo-aleatorio-simple-con-reemplazo"><i class="fa fa-check"></i><b>4.2.1</b> Muestreo aleatorio simple con reemplazo</a></li>
+<li class="chapter" data-level="4.2.2" data-path="conteo.html"><a href="conteo.html#muestreo-aleatorio-simple-sin-reemplazo"><i class="fa fa-check"></i><b>4.2.2</b> Muestreo aleatorio simple sin reemplazo</a></li>
+<li class="chapter" data-level="4.2.3" data-path="conteo.html"><a href="conteo.html#árboles-binomiales"><i class="fa fa-check"></i><b>4.2.3</b> Árboles binomiales</a></li>
+<li class="chapter" data-level="4.2.4" data-path="conteo.html"><a href="conteo.html#urnas-de-polya"><i class="fa fa-check"></i><b>4.2.4</b> Urnas de Polya</a></li>
+<li class="chapter" data-level="4.2.5" data-path="conteo.html"><a href="conteo.html#distribución-binomial"><i class="fa fa-check"></i><b>4.2.5</b> Distribución Binomial</a></li>
+<li class="chapter" data-level="4.2.6" data-path="conteo.html"><a href="conteo.html#distribución-hipergeométrica"><i class="fa fa-check"></i><b>4.2.6</b> Distribución Hipergeométrica</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="conteo.html"><a href="conteo.html#ejercicios-resueltos-1"><i class="fa fa-check"></i><b>4.3</b> Ejercicios resueltos</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="probacond.html"><a href="probacond.html"><i class="fa fa-check"></i><b>5</b> Probabilidad condicional e independencia</a><ul>
+<li class="chapter" data-level="5.1" data-path="probacond.html"><a href="probacond.html#ejemplos-de-proyección-sobre-el-espacio-muestral"><i class="fa fa-check"></i><b>5.1</b> Ejemplos de proyección sobre el espacio muestral</a></li>
+<li class="chapter" data-level="5.2" data-path="probacond.html"><a href="probacond.html#definición-y-propiedades-de-probabilidad-condicional"><i class="fa fa-check"></i><b>5.2</b> Definición y propiedades de probabilidad condicional</a></li>
+<li class="chapter" data-level="5.3" data-path="probacond.html"><a href="probacond.html#independencia-de-eventos"><i class="fa fa-check"></i><b>5.3</b> Independencia de eventos</a></li>
+<li class="chapter" data-level="5.4" data-path="probacond.html"><a href="probacond.html#regla-de-la-multiplicación"><i class="fa fa-check"></i><b>5.4</b> Regla de la multiplicación</a></li>
+<li class="chapter" data-level="5.5" data-path="probacond.html"><a href="probacond.html#probabilidad-total"><i class="fa fa-check"></i><b>5.5</b> Probabilidad total</a></li>
+<li class="chapter" data-level="5.6" data-path="probacond.html"><a href="probacond.html#teorema-de-bayes"><i class="fa fa-check"></i><b>5.6</b> Teorema de Bayes</a><ul>
+<li class="chapter" data-level="5.6.1" data-path="probacond.html"><a href="probacond.html#ejemplo-en-probabilidad-de-covid-condicional-a-muestra-positiva"><i class="fa fa-check"></i><b>5.6.1</b> Ejemplo en probabilidad de covid condicional a muestra positiva</a></li>
+<li class="chapter" data-level="5.6.2" data-path="probacond.html"><a href="probacond.html#ejemplo-en-muestreo-secuencial"><i class="fa fa-check"></i><b>5.6.2</b> Ejemplo en muestreo secuencial</a></li>
+<li class="chapter" data-level="5.6.3" data-path="probacond.html"><a href="probacond.html#ejemplo-de-la-paradoja-de-simpson"><i class="fa fa-check"></i><b>5.6.3</b> Ejemplo de la paradoja de Simpson</a></li>
+</ul></li>
+<li class="chapter" data-level="5.7" data-path="probacond.html"><a href="probacond.html#ejercicios-resueltos-2"><i class="fa fa-check"></i><b>5.7</b> Ejercicios resueltos</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/RodrigoZepeda" target="blank">Elaborado por Rodrigo Zepeda y Luis Carlos Bernal</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Notas para un curso de probabilidad</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="probacond" class="section level1">
+<h1><span class="header-section-number">Capítulo 5</span> Probabilidad condicional e independencia</h1>
+<div id="ejemplos-de-proyección-sobre-el-espacio-muestral" class="section level2">
+<h2><span class="header-section-number">5.1</span> Ejemplos de proyección sobre el espacio muestral</h2>
+</div>
+<div id="definición-y-propiedades-de-probabilidad-condicional" class="section level2">
+<h2><span class="header-section-number">5.2</span> Definición y propiedades de probabilidad condicional</h2>
+</div>
+<div id="independencia-de-eventos" class="section level2">
+<h2><span class="header-section-number">5.3</span> Independencia de eventos</h2>
+</div>
+<div id="regla-de-la-multiplicación" class="section level2">
+<h2><span class="header-section-number">5.4</span> Regla de la multiplicación</h2>
+</div>
+<div id="probabilidad-total" class="section level2">
+<h2><span class="header-section-number">5.5</span> Probabilidad total</h2>
+</div>
+<div id="teorema-de-bayes" class="section level2">
+<h2><span class="header-section-number">5.6</span> Teorema de Bayes</h2>
+<div id="ejemplo-en-probabilidad-de-covid-condicional-a-muestra-positiva" class="section level3">
+<h3><span class="header-section-number">5.6.1</span> Ejemplo en probabilidad de covid condicional a muestra positiva</h3>
+</div>
+<div id="ejemplo-en-muestreo-secuencial" class="section level3">
+<h3><span class="header-section-number">5.6.2</span> Ejemplo en muestreo secuencial</h3>
+</div>
+<div id="ejemplo-de-la-paradoja-de-simpson" class="section level3">
+<h3><span class="header-section-number">5.6.3</span> Ejemplo de la paradoja de Simpson</h3>
+</div>
+</div>
+<div id="ejercicios-resueltos-2" class="section level2">
+<h2><span class="header-section-number">5.7</span> Ejercicios resueltos</h2>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="conteo.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["LibroProbabilidad.pdf", "LibroProbabilidad.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
