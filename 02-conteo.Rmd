@@ -1,0 +1,31 @@
+# Conteo
+
+## Principios de conteo 
+
+### Permutaciones (muestras ordenadas)
+
+### Combinaciones (subpoblaciones)
+
+### Particiones (problemas de ocupación)
+
+### Representación mediante árboles
+
+### Representación mediante puntos y líneas
+
+### Principio de inclusión/exclusión
+
+## Conteo con proba
+
+### Muestreo aleatorio simple con reemplazo
+
+### Muestreo aleatorio simple sin reemplazo
+
+### Árboles binomiales
+
+### Urnas de Polya
+
+### Distribución Binomial
+
+### Distribución Hipergeométrica
+
+## Ejercicios resueltos

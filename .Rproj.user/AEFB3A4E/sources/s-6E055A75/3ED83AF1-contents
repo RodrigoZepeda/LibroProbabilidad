@@ -1,0 +1,21 @@
+--- 
+title: "Notas para un curso de probabilidad"
+author: "Rodrigo Zepeda-Tello / Luis Carlos Bernal"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+description: "Introducción a un curso de probabilidad para economía, finanzas e ingeniería"
+---
+
+# Algunos problemas probabilísticos
+
+
+```{r include=FALSE}
+# automatically create a bib database for R packages
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'knitr', 'rmarkdown','tidyverse'
+), 'packages.bib')
+```
