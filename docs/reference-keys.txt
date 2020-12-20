@@ -14,13 +14,8 @@ derivadas-parciales
 gradiente
 matriz-hessiana
 intro
-algunos-problemas-de-probabilidad
+algunos-problemas-simples-de-probabilidad
 ejemplos-sencillos-de-casos-favorables-entre-totales
-teoría-básica-de-conjuntos
-axiomas-de-kolmogorov-versión-1
-propiedades-de-la-probabilidad
-ejercicios-resueltos
-conteo
 principios-de-conteo
 permutaciones-muestras-ordenadas
 combinaciones-subpoblaciones
@@ -28,6 +23,8 @@ particiones-problemas-de-ocupación
 representación-mediante-árboles
 representación-mediante-puntos-y-líneas
 principio-de-inclusiónexclusión
+ejercicios-resueltos
+conteo
 conteo-con-proba
 muestreo-aleatorio-simple-con-reemplazo
 muestreo-aleatorio-simple-sin-reemplazo
@@ -35,6 +32,10 @@ muestreo-aleatorio-simple-sin-reemplazo
 urnas-de-polya
 distribución-binomial
 distribución-hipergeométrica
+teoría-básica-de-conjuntos
+axiomas-de-kolmogorov-versión-1
+propiedades-de-la-probabilidad
+principio-de-inclusiónexclusión-1
 ejercicios-resueltos-1
 probacond
 ejemplos-de-proyección-sobre-el-espacio-muestral

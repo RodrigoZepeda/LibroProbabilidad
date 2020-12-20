@@ -73,7 +73,7 @@
 
 \title{Notas para un curso de probabilidad}
 \author{Rodrigo Zepeda-Tello / Luis Carlos Bernal}
-\date{2020-12-18}
+\date{2020-12-19}
 
 \begin{document}
 \maketitle
@@ -130,11 +130,51 @@
 \hypertarget{intro}{%
 \chapter{Introducción}\label{intro}}
 
-\hypertarget{algunos-problemas-de-probabilidad}{%
-\section{Algunos problemas de probabilidad}\label{algunos-problemas-de-probabilidad}}
+Probabilidad es una rama ``nueva'' de matemáticas (¡tiene menos de 100 años!) que sólo entró a ser considerada como tal después de que Kolmogorov \href{https://link.springer.com/article/10.1007/BF00348144}{estableciera sus axiomas en 1933}. Inicialmente (y la aproximación que tomamos aquí es histórica) probabilidad era sólo usada para juegos de azar tomando estimaciones como la siguiente:
+\[
+\text{Probabilidad de ganar} = \dfrac{\text{Casos favorables}}{\text{Todos los casos posibles}}.
+\]
+Por ejemplo, en una apuesta por el lado resultante de un tiro de moneda con posibles resultados \emph{cara} ó \emph{cruz}, al elegir \emph{cruz} se contempla una probabilidad de ganar de \(1/2\) pues los \(\text{Casos favorables}\) son sólo uno (que salga \emph{cruz}) y \(\text{Todos los casos posibles}\) (descontando cosas raras como que la moneda caiga de lado o que el mundo se acabe antes de que la moneda toque el piso) son dos: caer \emph{cara} ó \emph{cruz}. Esto lleva al siguiente cálculo de fracciones:
+
+\[
+\text{Probabilidad de ganar} = \dfrac{\text{Casos favorables}}{\text{Todos los casos}} = \dfrac{1}{2}
+\]
+En el caso del tiro de la moneda la aproximación inicial, referente a una moneda \emph{justa}, de \(1/2\) de probabilidad de ganar puede no mantenerse siempre. En monedas \emph{reales} se sabe que no es exactamente \(1/2\) la probabilidad (\href{https://statweb.stanford.edu/~susan/papers/headswithJ.pdf}{el relieve sí importa} de forma minúscula además de que \href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2789164/}{hay gente que puede manipular que una moneda caiga con mayor probabilidad de la manera deseada}). Podríamos entonces tener el caso de una moneda cargada donde después de arrojarla 100 veces 99 de ellas resultaron en \emph{cara}. Si quisiéramos adivinar el resultado del siguiente tiro (el \(101\)) no sería tan buena aproximación el contar
+\[
+\dfrac{\text{Casos favorables}}{\text{Todos los casos}}
+\]
+pues sigue siendo \(1\) caso en el que ganas (que caiga \emph{cara}) de dos casos (que caiga \emph{cara} o \emph{cruz}). Una mejor aproximación al tiro de la moneda sería (en este caso) contar toda la información de las frecuencias históricas para considerar los \(100\) tiros que ya conocemos:
+\[
+\text{Probabilidad de ganar} =  \dfrac{\text{Casos en los que salió cruz}}{\text{Todos los tiros pasados}} = \dfrac{1}{100}
+\]
+En este caso de una moneda \emph{cargada} (es decir que está manipulada para caer más de un lado que de otro) las probabilidades resultan de un conteo de frecuencias pasadas de eventos que ya ocurrieron y no necesariamente resultan en eventos de misma probabilidad (llamados equiprobables). Específicamente en este caso la probabilidad de ganar si elijes cruz es \(1/100\) mientras que la de perder es \(99/100\).
+
+A la anterior interpretación de la probabilidad que se dedica a contar del histórico cuántos eventos de cada tipo han ocurrido y dividirlo entre los posibles se le conoce como \emph{frecuentista}. Sin embargo dicha interpretación es incompleta. Bajo la idea de\\
+\[
+\dfrac{\text{Casos favorables}}{\text{Todos los casos}}
+\]
+o bien de
+\[
+\dfrac{\text{Veces en las que ha ocurrido lo que me interesa}}{\text{Todos los casos}}
+\]
+no se pueden plantear probabilidades para eventos futuros. Por ejemplo: ¿cuál es la probabilidad de éxito de un nuevo producto en el mercado? ¿qué candidato ganará las próximas elecciones? ¿cuál es la probabilidad de que mañana llueva en mi ciudad? Todos estos eventos no pueden modelarse contando el número de veces que ha ocurrido el evento en el pasado ¡porque no son eventos que se repitan! Tampoco tiene mucho sentido modelarlo considerando casos favorables entre casos totales: aunque un producto puede tener éxito o no tenerlo la probabilidad no es 50 y 50 (los mercadólogos se aseguran de ello); en una elección con tres candidatos no ocurre que cada uno tenga 33.33\% de probabilidad de ganar (siempre hay unos con mayores posibilidades); si mañana llueve o no depende de muchos factores desde la presión barométrica, el clima histórico de mi ciudad, la temperatura (bien sabes que hay climas más probables que otros\footnote{O eres de Monterrey donde cualquier evento climático puede ocurrir en un abrir y cerrar de ojos.}). Para esto último (ya llegaremos) se requerirá maquinaria más pesada: el invento de un concepto conocido como \emph{variables aleatorias} y \emph{el teorema de Bayes} que en conjunto permiten integrar información adicional (como presión barométrica en el caso de la lluvia o datos de productos similares en el caso del mercado) para poder modelar la probabilidad.
+
+Si la probabilidad no es sólo conteo de eventos (casos favorables y totales) ¿qué es entonces? En esto se abre una discusión eterna. Hay probabilistas que afirman que es una medida de creencias (si yo te digo que hay una probabilidad del 70\% de que llueva mañana es porque \emph{creo} que la lluvia del día de mañana es un evento posible y \emph{elijo} cuantificar mi creencia con ese número). A estos probabilistas se les conoce como Bayesianos. Por otro lado, otros probabilistas afirman que es una extensión de la lógica. Al enunciado \emph{Mañana va a llover} hoy no se le puede asignar una categoría de \emph{verdad} o \emph{falsedad}. Empero, se puede asignar una probabilidad (en este caso el 70\%) que cuantifique qué tan verdadero es un enunciado. De esta forma, la probabilidad extiende la lógica diciendo qué tan cierto es algo con la probabilidad de 0\% siendo un evento que es completamente falso y 100\% un evento completamente verdadero.
+
+Yo, Rodrigo, soy partidario de esta última interpretación. Sin embargo, para fines de estas notas, todas las interpretaciones, sean conteos de frecuencia, grados de credibilidad o grados de verdad, van a ser equivalentes y sólo en detalles minúsculos notaremos algunas diferencias interpretativas.
+
+Por ahora, comenzaremos nuestra aventura por el mundo de la probabilidad analizando la probabilidad clásica: el conteo de cuántos eventos favorables hay sobre el total de eventos posibles.
+
+\begin{quote}
+En esta sección estudiaremos: algunos problemas de probabilidad basado en conteos muy simples (equiprobables) y más adelante nos enfocaremos sólo en contar eventos (cuántas formas hay de que ocurra algo). En la siguiente sección utilizaremos estos conteos para comenzar a hablar de probabilidades
+\end{quote}
+
+\hypertarget{algunos-problemas-simples-de-probabilidad}{%
+\section{Algunos problemas ``simples'' de probabilidad}\label{algunos-problemas-simples-de-probabilidad}}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
+\tightlist
 \item
   Un dado de 6 caras.
 \item
@@ -144,6 +184,7 @@
 \item
   Ejercicio: dos dados de 12 caras cada uno.
 \item
+  Ejercicio: dos dados de 12 caras cada uno condicional a la cara de un dado
 \end{enumerate}
 
 Definición preliminar: proba como eventos favorables / eventos totales
@@ -151,21 +192,6 @@ Anotación de por qué eso no funciona siempre.
 
 \hypertarget{ejemplos-sencillos-de-casos-favorables-entre-totales}{%
 \subsection{Ejemplos sencillos de casos favorables entre totales}\label{ejemplos-sencillos-de-casos-favorables-entre-totales}}
-
-\hypertarget{teoruxeda-buxe1sica-de-conjuntos}{%
-\subsection{Teoría básica de conjuntos}\label{teoruxeda-buxe1sica-de-conjuntos}}
-
-\hypertarget{axiomas-de-kolmogorov-versiuxf3n-1}{%
-\subsection{Axiomas de Kolmogorov (versión 1)}\label{axiomas-de-kolmogorov-versiuxf3n-1}}
-
-\hypertarget{propiedades-de-la-probabilidad}{%
-\subsection{Propiedades de la probabilidad}\label{propiedades-de-la-probabilidad}}
-
-\hypertarget{ejercicios-resueltos}{%
-\section{Ejercicios resueltos}\label{ejercicios-resueltos}}
-
-\hypertarget{conteo}{%
-\chapter{Conteo}\label{conteo}}
 
 \hypertarget{principios-de-conteo}{%
 \section{Principios de conteo}\label{principios-de-conteo}}
@@ -188,6 +214,12 @@ Anotación de por qué eso no funciona siempre.
 \hypertarget{principio-de-inclusiuxf3nexclusiuxf3n}{%
 \subsection{Principio de inclusión/exclusión}\label{principio-de-inclusiuxf3nexclusiuxf3n}}
 
+\hypertarget{ejercicios-resueltos}{%
+\section{Ejercicios resueltos}\label{ejercicios-resueltos}}
+
+\hypertarget{conteo}{%
+\chapter{Conteo}\label{conteo}}
+
 \hypertarget{conteo-con-proba}{%
 \section{Conteo con proba}\label{conteo-con-proba}}
 
@@ -208,6 +240,18 @@ Anotación de por qué eso no funciona siempre.
 
 \hypertarget{distribuciuxf3n-hipergeomuxe9trica}{%
 \subsection{Distribución Hipergeométrica}\label{distribuciuxf3n-hipergeomuxe9trica}}
+
+\hypertarget{teoruxeda-buxe1sica-de-conjuntos}{%
+\subsection{Teoría básica de conjuntos}\label{teoruxeda-buxe1sica-de-conjuntos}}
+
+\hypertarget{axiomas-de-kolmogorov-versiuxf3n-1}{%
+\subsection{Axiomas de Kolmogorov (versión 1)}\label{axiomas-de-kolmogorov-versiuxf3n-1}}
+
+\hypertarget{propiedades-de-la-probabilidad}{%
+\subsection{Propiedades de la probabilidad}\label{propiedades-de-la-probabilidad}}
+
+\hypertarget{principio-de-inclusiuxf3nexclusiuxf3n-1}{%
+\subsection{Principio de inclusión/exclusión}\label{principio-de-inclusiuxf3nexclusiuxf3n-1}}
 
 \hypertarget{ejercicios-resueltos-1}{%
 \section{Ejercicios resueltos}\label{ejercicios-resueltos-1}}
