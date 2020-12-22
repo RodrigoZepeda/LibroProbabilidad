@@ -14,13 +14,13 @@ pre code {
 }
 
 .Ejemplo {
+  background-color: transparent;
   font-size: 12px;
   border-color: #0A7000;
   border-style: groove;
   border-radius: 25px;
   padding: 10px;
   margin: 5px 5px 10px 5px;
-  background-color: white;
 }
 
 .Ejemplo h3 {
