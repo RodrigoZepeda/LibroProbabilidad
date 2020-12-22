@@ -12,3 +12,201 @@ pre {
 pre code {
   white-space: inherit;
 }
+
+.Ejemplo {
+  font-size: 12px;
+  border-color: #0A7000;
+  border-style: groove;
+  border-radius: 25px;
+  padding: 10px;
+  margin: 5px 5px 10px 5px;
+  background-color: white;
+}
+
+.Ejemplo h3 {
+  font-size: 12px !important;
+  margin-top: 0px !important;
+  color: #0A7000;
+  font-style: italic;
+  padding: 0px;
+}
+
+.Ejemplo p {
+  font-size: 12px;
+}
+
+.Recuadro {
+  font-size: 12px;
+  border-color: #3DB295;
+  border-style: groove;
+  border-radius: 25px;
+  padding: 20px;
+  margin: 5px 5px 10px 5px;
+  background-color: white;
+}
+
+.Recuadro h3 {
+  font-size: 12px !important;
+  margin-top: 0px !important;
+  color: #3DB295;
+  font-style: italic;
+  padding: 0px;
+}
+
+.Recuadro p {
+  font-size: 12px;
+}
+
+.Teorema {
+  font-size: 12px;
+  border-color: #900C3F;
+  border-style: groove;
+  border-radius: 25px;
+  padding: 20px;
+  margin: 5px 5px 10px 5px;
+  background-color: white;
+}
+
+.Teorema h3 {
+  font-size: 12px !important;
+  margin-top: 0px !important;
+  color: #900C3F;
+  font-style: italic;
+  padding: 0px;
+}
+
+.Teorema p {
+  font-size: 12px;
+}
+
+.Propiedades {
+  font-size: 12px;
+  border-color: #C301AC;
+  border-style: groove;
+  border-radius: 25px;
+  padding: 20px;
+  margin: 5px 5px 10px 5px;
+  background-color: white;
+}
+
+.Propiedades h3 {
+  font-size: 12px !important;
+  margin-top: 0px !important;
+  color: #C301AC;
+  font-style: italic;
+  padding: 0px;
+}
+
+.Propiedades p {
+  font-size: 12px;
+}
+
+.Importante {
+  font-size: 12px;
+  border-color: #FF0000;
+  border-style: groove;
+  border-radius: 25px;
+  padding: 20px;
+  margin: 5px 5px 10px 5px;
+  background-color: white;
+}
+
+.Importante h3 {
+  font-size: 12px !important;
+  margin-top: 0px !important;
+  color: #FF0000;
+  font-style: italic;
+  padding: 0px;
+}
+
+.Importante p {
+  font-size: 12px;
+}
+
+.Corolario {
+  font-size: 12px;
+  border-color: #0CABAD;
+  border-style: groove;
+  border-radius: 25px;
+  padding: 20px;
+  margin: 5px 5px 10px 5px;
+  background-color: white;
+}
+
+.Corolario h3 {
+  font-size: 12px !important;
+  margin-top: 0px !important;
+  color: #0CABAD;
+  font-style: italic;
+  padding: 0px;
+}
+
+.Corolario p {
+  font-size: 12px;
+}
+
+.Lema {
+  font-size: 12px;
+  border-color: #0BA50B;
+  border-style: groove;
+  border-radius: 25px;
+  padding: 20px;
+  margin: 5px 5px 10px 5px;
+  background-color: white;
+}
+
+.Lema h3 {
+  font-size: 12px !important;
+  margin-top: 0px !important;
+  color: #0BA50B;
+  font-style: italic;
+  padding: 0px;
+}
+
+.Lema p {
+  font-size: 12px;
+}
+
+.Ejercicio {
+  font-size: 12px;
+  border-color: #183283;
+  border-style: groove;
+  border-radius: 25px;
+  padding: 20px;
+  margin: 5px 5px 10px 5px;
+  background-color: white;
+}
+
+.Ejercicio h3 {
+  font-size: 12px !important;
+  margin-top: 0px !important;
+  color: #183283;
+  font-style: italic;
+  padding: 0px;
+}
+
+.Ejercicio p {
+  font-size: 12px;
+}
+
+.Formula {
+  font-size: 12px;
+  border-color: #137AA4;
+  border-style: groove;
+  border-radius: 25px;
+  padding: 20px;
+  margin: 5px 5px 10px 5px;
+  background-color: white;
+}
+
+.Formula h3 {
+  font-size: 12px !important;
+  margin-top: 0px !important;
+  color: #137AA4;
+  font-style: italic;
+  padding: 0px;
+}
+
+.Formula p {
+  font-size: 12px;
+}

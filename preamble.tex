@@ -1,1 +1,95 @@
 \usepackage{booktabs}
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{xcolor}
+\definecolor{ejemplocolor}{HTML}{0A7000}
+\definecolor{recuadrocolor}{HTML}{3DB295}
+\definecolor{teoremacolor}{HTML}{900C3F}
+\definecolor{propiedadescolor}{HTML}{C301AC}
+\definecolor{importantecolor}{HTML}{FF0000}
+\definecolor{corolariocolor}{HTML}{0CABAD}
+\definecolor{lemacolor}{HTML}{0BA50B}
+\definecolor{ejerciciocolor}{HTML}{183283}
+\definecolor{formulacolor}{HTML}{137AA4}
+
+
+\newenvironment{Ejemplo}
+{\begin{mdframed}[
+  linecolor=ejemplocolor,
+  skipabove=12pt,
+  skipbelow=12pt,
+  roundcorner=20pt,
+  splittopskip=2\topsep]}
+{\end{mdframed}}
+
+\newenvironment{Recuadro}
+{\begin{mdframed}[
+  linecolor=recuadrocolor,
+  skipabove=12pt,
+  skipbelow=12pt,
+  roundcorner=20pt,
+  splittopskip=2\topsep]}
+{\end{mdframed}}
+
+\newenvironment{Teorema}
+{\begin{mdframed}[
+  linecolor=teoremacolor,
+  skipabove=12pt,
+  skipbelow=12pt,
+  roundcorner=20pt,
+  splittopskip=2\topsep]}
+{\end{mdframed}}
+
+\newenvironment{Propiedades}
+{\begin{mdframed}[
+  linecolor=propiedadescolor,
+  skipabove=12pt,
+  skipbelow=12pt,
+  roundcorner=20pt,
+  splittopskip=2\topsep]}
+{\end{mdframed}}
+
+\newenvironment{Importante}
+{\begin{mdframed}[
+  linecolor=importantecolor,
+  skipabove=12pt,
+  skipbelow=12pt,
+  roundcorner=20pt,
+  splittopskip=2\topsep]}
+{\end{mdframed}}
+
+\newenvironment{Corolario}
+{\begin{mdframed}[
+  linecolor=corolariocolor,
+  skipabove=12pt,
+  skipbelow=12pt,
+  roundcorner=20pt,
+  splittopskip=2\topsep]}
+{\end{mdframed}}
+
+\newenvironment{Lema}
+{\begin{mdframed}[
+  linecolor=lemacolor,
+  skipabove=12pt,
+  skipbelow=12pt,
+  roundcorner=20pt,
+  splittopskip=2\topsep]}
+{\end{mdframed}}
+
+\newenvironment{Ejercicio}
+{\begin{mdframed}[
+  linecolor=ejerciciocolor,
+  skipabove=12pt,
+  skipbelow=12pt,
+  roundcorner=20pt,
+  splittopskip=2\topsep]}
+{\end{mdframed}}
+
+\newenvironment{Formula}
+{\begin{mdframed}[
+  linecolor=formulacolor,
+  skipabove=12pt,
+  skipbelow=12pt,
+  roundcorner=20pt,
+  splittopskip=2\topsep]}
+{\end{mdframed}}
+
